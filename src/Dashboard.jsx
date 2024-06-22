@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
 const Dashboard = () => {
-  const [color, setColor] = useState("bg-red-500");
+  const [color, setColor] = useState("bg-yellow-500");
 
   useEffect(() => {
-    const colors = ["bg-red-500", "bg-white-500"];
+    const colors = ["bg-yellow-500", "bg-white-500"];
     let currentIndex = 0;
 
     const intervalId = setInterval(() => {
@@ -19,7 +19,7 @@ const Dashboard = () => {
     <div
       className={`min-h-screen ${color} flex items-center justify-center transition-colors duration-5000`}
     >
-      <h1 className="text-4xl font-bold text-gray-900">W.A.C-APP</h1>
+      <h1 className="text-4xl font-bold text-gray-900">MAS-APP</h1>
     </div>
   );
 };
