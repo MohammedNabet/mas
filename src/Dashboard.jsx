@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import TabNavigation from "./TabNavigation";
 
 const Dashboard = () => {
   const [color, setColor] = useState("bg-yellow-500");
+  const [activeTab, setActiveTab] = useState("Home");
 
   useEffect(() => {
     const colors = ["bg-yellow-500", "bg-white-500"];
@@ -15,11 +17,16 @@ const Dashboard = () => {
     return () => clearInterval(intervalId);
   }, []);
 
+  const tabs = ["Home", "Profile", "Settings"];
+
   return (
     <div
-      className={`min-h-screen ${color} flex items-center justify-center transition-colors duration-5000`}
+      className={`min-h-screen ${color} flex flex-col items-center justify-center transition-colors duration-5000 relative`}
     >
-      <h1 className="text-4xl font-bold text-gray-900">MAS-APP</h1>
+      <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-20">
+        {activeTab}
+      </h1>
+      <TabNavigation tabs={tabs} onTabClick={setActiveTab} />
     </div>
   );
 };
