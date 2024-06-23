@@ -1,30 +1,26 @@
-import React, { useState } from "react";
-import { FaHome, FaUser, FaCog } from "react-icons/fa"; // Import icons from react-icons
+// TabNavigation.jsx
+import React from "react";
+import PropTypes from "prop-types";
 
-const TabNavigation = ({ tabs, onTabClick }) => {
-  const [activeTab, setActiveTab] = useState(tabs[0].name);
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab.name);
-    onTabClick(tab.name);
-  };
-
+const TabNavigation = ({ isActive, icon: Icon, label, onClick }) => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-gray-800 py-2 flex justify-around">
-      {tabs.map((tab) => (
-        <button
-          key={tab.name}
-          className={`py-2 px-4 text-sm md:text-base text-white flex flex-col items-center ${
-            activeTab === tab.name ? "bg-gray-600" : "bg-gray-800"
-          } rounded`}
-          onClick={() => handleTabClick(tab)}
-        >
-          <tab.icon className="mb-1" />
-          <span className="text-xs">{tab.label}</span>
-        </button>
-      ))}
+    <div
+      className={`flex flex-col items-center cursor-pointer p-2 transition-transform duration-300 ${
+        isActive ? "text-blue-500 transform scale-110" : ""
+      }`}
+      onClick={onClick}
+    >
+      <Icon className="mb-1" />
+      <span>{label}</span>
     </div>
   );
+};
+
+TabNavigation.propTypes = {
+  isActive: PropTypes.bool.isRequired,
+  icon: PropTypes.elementType.isRequired,
+  label: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default TabNavigation;
