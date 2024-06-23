@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import TabNavigation from "./TabNavigation";
 import { FaHome, FaUser, FaCog } from "react-icons/fa";
 import UserProfile from "./UserProfile";
+import Home from "./Home";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -20,18 +21,12 @@ const Dashboard = () => {
 
   return (
     <div
-      className={`min-h-screen git branch
-flex flex-col items-center justify-center transition-colors duration-5000 relative`}
+    
     >
-      <h1 className="text-2xl md:text-4xl font-bold text-gray-900 mb-20">
-        {activeTab}
-      </h1>
       {activeTab === "Profile" ? (
         <UserProfile user={user} />
       ) : (
-        <div className="text-center">
-          <p className="text-lg">Content for {activeTab}</p>
-        </div>
+        <Home user={user} />
       )}
       <TabNavigation tabs={tabs} onTabClick={setActiveTab} />
     </div>
