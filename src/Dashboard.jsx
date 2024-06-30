@@ -5,6 +5,7 @@ import TabNavigation from "./TabNavigation";
 import { FaHome, FaUser, FaCog } from "react-icons/fa";
 import UserProfile from "./UserProfile";
 import Home from "./Home";
+import Service from "./Service";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -27,7 +28,7 @@ const Dashboard = () => {
         return <UserProfile user={user} />;
       case "Settings":
         // Implement Settings component or page
-        return <div>Settings Page</div>;
+        return <Service user={user} />;
       case "Home":
       default:
         return <Home user={user} />;
