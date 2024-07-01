@@ -1,4 +1,5 @@
 import React from "react";
+import Slider from "react-slick";
 import "./Home.css";
 
 const Home = ({ user }) => {
@@ -14,42 +15,22 @@ const Home = ({ user }) => {
       avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
     },
     {
-      id: 3,
-      name: "User lx name here",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar3.png",
-    },
-    {
-      id: 4,
+      id: 2,
       name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar4.png",
+      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
     },
     {
-      id: 5,
+      id: 2,
       name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar5.png",
+      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
     },
     {
-      id: 6,
+      id: 2,
       name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar6.png",
+      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
     },
     {
-      id: 7,
-      name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar7.png",
-    },
-    {
-      id: 8,
-      name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar8.png",
-    },
-    {
-      id: 9,
-      name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar1.png",
-    },
-    {
-      id: 10,
+      id: 2,
       name: "User 2",
       avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
     },
@@ -74,16 +55,6 @@ const Home = ({ user }) => {
       date: "May 17, 2023",
       description: "Another post",
       imageUrl: null,
-    },
-
-    {
-      id: 1,
-      userId: 1,
-      username: "User 1",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
-      date: "May 18, 2023",
-      description: "This is a post description",
-      imageUrl: "./sto.png",
     },
     // ... other posts
   ]);
@@ -114,8 +85,17 @@ const Home = ({ user }) => {
     </div>
   );
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
-    <div className="container">
+    <div>
+      <br />
       <div className="userContainer">
         {statusUsers.map((user) => (
           <UserListItem key={user.id} user={user} />

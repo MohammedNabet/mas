@@ -1,58 +1,147 @@
-import React from "react";
-
-const messages = [
-  "It was said that you would, destroy the Sith, not join them.",
-  "It was you who would bring balance to the Force",
-  "Not leave it in Darkness"
-];
-
-const avatarSrc = "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg";
-
-const Service = () => {
+function Service() {
   return (
-    <div class="mx-auto max-w-xs">
-      <h1>Hello</h1>
-      <label
-        for="example5"
-        class="mb-1 block text-sm font-medium text-gray-700"
-      >
-        Upload file
-      </label>
-      <label class="flex w-full cursor-pointer appearance-none items-center justify-center rounded-md border-2 border-dashed border-gray-200 p-6 transition-all hover:border-primary-300">
-        <div class="space-y-1 text-center">
-          <div class="mx-auto inline-flex h-10 w-10 items-center justify-center rounded-full bg-gray-100">
+    <div>
+      <h1>He</h1>
+      <ul className="space-y-1">
+        <li>
+          <a
+            href="#"
+            className="flex items-center gap-2 rounded-lg bg-gray-100 px-4 py-2 text-gray-700"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
+              className="size-5 opacity-75"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
               stroke="currentColor"
-              class="h-6 w-6 text-gray-500"
+              strokeWidth="2"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
               />
             </svg>
-          </div>
-          <div class="text-gray-600">
-            <a
-              href="#"
-              class="font-medium text-primary-500 hover:text-primary-700"
+
+            <span className="text-sm font-medium"> General </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="group flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <div className="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-5 opacity-75"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                />
+              </svg>
+
+              <span className="text-sm font-medium"> Teams </span>
+            </div>
+
+            <span className="shrink-0 rounded-full bg-gray-100 px-3 py-0.5 text-xs text-gray-600 group-hover:bg-gray-200 group-hover:text-gray-700">
+              5
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-5 opacity-75"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
             >
-              Click to upload
-            </a>{" "}
-            or drag and drop
-          </div>
-          <p class="text-sm text-gray-500">
-            SVG, PNG, JPG or GIF (max. 800x400px)
-          </p>
-        </div>
-        <input id="example5" type="file" class="sr-only" />
-      </label>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+              />
+            </svg>
+
+            <span className="text-sm font-medium"> Billing </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="group flex items-center justify-between rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <div className="flex items-center gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="size-5 opacity-75"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"
+                />
+              </svg>
+
+              <span className="text-sm font-medium"> Invoices </span>
+            </div>
+
+            <span className="shrink-0 rounded-full bg-gray-100 px-3 py-0.5 text-xs text-gray-600 group-hover:bg-gray-200 group-hover:text-gray-700">
+              3
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#"
+            className="flex items-center gap-2 rounded-lg px-4 py-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-5 opacity-75"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+              />
+            </svg>
+
+            <span className="text-sm font-medium"> Account </span>
+          </a>
+        </li>
+      </ul>
     </div>
   );
-};
+}
 
 export default Service;
