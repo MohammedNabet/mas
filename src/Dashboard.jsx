@@ -6,6 +6,8 @@ import { FaHome, FaUser, FaCog } from "react-icons/fa";
 import UserProfile from "./UserProfile";
 import Home from "./Home";
 import Service from "./Service";
+import { FaMessage } from "react-icons/fa6";
+import Message from "./Message";
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -13,6 +15,7 @@ const Dashboard = () => {
   const tabs = [
     { name: "Home", label: "Home", icon: FaHome },
     { name: "Profile", label: "Profile", icon: FaUser },
+    { name: "Message", label: "Message", icon: FaMessage},
     { name: "Settings", label: "Settings", icon: FaCog },
   ];
 
@@ -29,6 +32,9 @@ const Dashboard = () => {
       case "Settings":
         // Implement Settings component or page
         return <Service user={user} />;
+      case "Message":
+        // Implement Settings component or page
+        return <Message user={user} />;
       case "Home":
       default:
         return <Home user={user} />;

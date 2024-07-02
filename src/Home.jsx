@@ -95,6 +95,7 @@ const Home = ({ user }) => {
 
   return (
     <div>
+      
       <br />
       <div className="userContainer">
         {statusUsers.map((user) => (

@@ -6,27 +6,55 @@ import Gallery from "./Gallery";
 
 function UserProfile()  {
   return (
-  <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white shadow-lg rounded-lg p-6 max-w-sm mx-auto">
-        <div className="flex items-center mb-4">
-          <img
-            src="https://via.placeholder.com/150"
-            alt="Profile"
-            className="w-24 h-24 rounded-full object-cover border-2 border-gray-300"
-          />
-          <div className="ml-4">
-            <h2 className="text-2xl font-bold text-gray-900">John Doe</h2>
-            <p className="text-gray-700">johndoe@example.com</p>
+    <div class="p-4 bg-white shadow-lg rounded-2xl  dark:bg-gray-800">
+      <div class="flex flex-row items-start gap-4 ">
+        <img src="./R.jpeg" class="rounded-lg w-28 h-28" />
+        <div class="flex flex-col justify-between w-full h-28">
+          <div>
+            <p class="text-xl font-medium text-gray-800 dark:text-white">
+              John Jackson
+            </p>
+            <p class="text-xs text-gray-400">FullStack dev</p>
+          </div>
+          <div class="w-full p-2 bg-blue-100 rounded-lg dark:bg-white">
+            <div class="flex items-center justify-between text-xs text-gray-400 dark:text-black">
+              <p class="flex flex-col">
+                Articles
+                <span class="font-bold text-black dark:text-indigo-500">
+                  34
+                </span>
+              </p>
+              <p class="flex flex-col">
+                Followers
+                <span class="font-bold text-black dark:text-indigo-500">
+                  455
+                </span>
+              </p>
+              <p class="flex flex-col">
+                Rating
+                <span class="font-bold text-black dark:text-indigo-500">
+                  9.3
+                </span>
+              </p>
+            </div>
           </div>
         </div>
-        <div>
-          <h3 className="text-xl font-semibold text-gray-800">About</h3>
-          <p className="text-gray-600 mt-2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.
-          </p>
-        </div>
-        <Gallery />
       </div>
+      <div class="flex items-center justify-between gap-4 mt-6">
+        <button
+          type="button"
+          class="w-1/2 px-4 py-2 text-base bg-white border rounded-lg text-grey-500 hover:bg-gray-200 "
+        >
+          Chat
+        </button>
+        <button
+          type="button"
+          class="w-1/2 px-4 py-2 text-base text-white bg-indigo-500 border rounded-lg hover:bg-indigo-700 "
+        >
+          Add friend
+        </button>
+      </div>
+      <Gallery></Gallery>
     </div>
   );
 };
