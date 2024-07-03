@@ -52,7 +52,7 @@ export default function Message() {
         </div>
        
       </div>
-      <ul className="mt-12 divide-y">
+      <ul className="mt-4 divide-y">
         {members.map((item, idx) => (
           <li key={idx} className="py-5">
             <div className="flex gap-3">
