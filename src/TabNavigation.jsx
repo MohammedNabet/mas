@@ -7,7 +7,7 @@ const TabNavigation = ({ isActive, icon: Icon, label, onClick }) => {
   return (
     <div
       className={`flex flex-col items-center cursor-pointer p-2 transition-transform duration-300 ${
-        isActive ? "text-blue-500 transform scale-110" : "text-gray-500"
+        isActive ? "text-yellow-500 transform scale-110" : "text-gray-500"
       }`}
       onClick={onClick}
     >

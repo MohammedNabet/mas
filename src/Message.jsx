@@ -46,11 +46,9 @@ export default function Message() {
     <div className="max-w-2xl mx-auto px-4">
       <div className="items-start justify-between sm:flex">
         <div>
-            <br />
+          <br />
           <h4 className="text-gray-800 text-xl font-semibold">Messages ...</h4>
-          
         </div>
-       
       </div>
       <ul className="mt-4 divide-y">
         {members.map((item, idx) => (

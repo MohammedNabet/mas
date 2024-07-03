@@ -2,6 +2,10 @@ import React from "react";
 import Slider from "react-slick";
 import "./Home.css";
 import Publication from "./Publication";
+import { IoNotificationsSharp } from "react-icons/io5";
+import { FaMessage } from "react-icons/fa6";
+
+
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -96,6 +100,61 @@ const Home = ({ user }) => {
 
   return (
     <div>
+      <nav class="flex flex-wrap items-center justify-between p-4 bg-white">
+        <div class="w-auto lg:order-2 lg:w-1/5 lg:text-center">
+          <a class="text-xl font-semibold text-gray-800 font-heading" href="#">
+            MasApp
+          </a>
+        </div>
+        <div class="block lg:hidden">
+          <div className="flex ">
+            <IoNotificationsSharp className="mb-1 text-4xl	 text-gray-500 mt-1 p-2" />
+
+            <FaMessage className="mb-1 text-4xl	 text-gray-500 mt-1 p-2" />
+          </div>
+        </div>
+        <div class="hidden w-full navbar-menu lg:order-1 lg:block lg:w-2/5">
+          <a
+            class="block mt-4 mr-10 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            Home
+          </a>
+          <a
+            class="block mt-4 mr-10 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            Team
+          </a>
+          <a
+            class="block mt-4 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            Galery
+          </a>
+        </div>
+        <div class="hidden w-full navbar-menu lg:order-3 lg:block lg:w-2/5 lg:text-right">
+          <a
+            class="block mt-4 mr-10 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            Content
+          </a>
+          <a
+            class="block mt-4 mr-10 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            FAQ
+          </a>
+          <a
+            class="block mt-4 text-blue-900 lg:inline-block lg:mt-0 hover:text-indigo-600"
+            href="#"
+          >
+            Contact
+          </a>
+        </div>
+      </nav>
+
       <br />
       <div className="userContainer">
         {statusUsers.map((user) => (
@@ -103,11 +162,8 @@ const Home = ({ user }) => {
         ))}
       </div>
 
-<br />
-<Publication></Publication>
-
-
-
+      <br />
+      <Publication></Publication>
 
       <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
@@ -190,7 +246,6 @@ const Home = ({ user }) => {
           </div>
         </div>
       </div>
-     
 
       <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
