@@ -8,6 +8,9 @@ import Home from "./Home";
 import Service from "./Service";
 import { FaMessage } from "react-icons/fa6";
 import Message from "./Message";
+import { FaFootballBall } from "react-icons/fa";
+import Football from "./Football";
+
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState("Home");
@@ -15,7 +18,8 @@ const Dashboard = () => {
   const tabs = [
     { name: "Home", label: "Home", icon: FaHome },
     { name: "Profile", label: "Profile", icon: FaUser },
-    { name: "Message", label: "Message", icon: FaMessage},
+    { name: "Message", label: "Message", icon: FaMessage },
+    { name: "Football", label: "Football", icon: FaFootballBall },
     { name: "Settings", label: "Settings", icon: FaCog },
   ];
 
@@ -35,6 +39,9 @@ const Dashboard = () => {
       case "Message":
         // Implement Settings component or page
         return <Message user={user} />;
+      case "Football":
+        // Implement Settings component or page
+        return <Football user={user} />;
       case "Home":
       default:
         return <Home user={user} />;
