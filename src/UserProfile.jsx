@@ -13,10 +13,10 @@ function UserProfile()  {
           <img
             alt="profil"
             src="./r.jpeg"
-            class="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white dark:border-gray-800"
+            class="mx-auto object-cover rounded-full h-16 w-16  border-2 border-white "
           />
         </a>
-        <p class="mt-2 text-xl font-medium text-gray-800 dark:text-white">
+        <p class="mt-2 text-xl font-medium text-gray-800 ">
           Charlie
         </p>
         <p class="mb-4 text-xs text-gray-400">Nantes</p>
@@ -24,18 +24,18 @@ function UserProfile()  {
           Professional
         </p>
         <div class="w-full p-2 mt-4 rounded-lg">
-          <div class="flex items-center justify-between text-sm text-gray-600 dark:text-gray-200">
+          <div class="flex items-center justify-between text-sm text-gray-600 ">
             <p class="flex flex-col">
               Articles
-              <span class="font-bold text-black dark:text-white">34</span>
+              <span class="font-bold text-black ">34</span>
             </p>
             <p class="flex flex-col">
               Followers
-              <span class="font-bold text-black dark:text-white">455</span>
+              <span class="font-bold text-black ">455</span>
             </p>
             <p class="flex flex-col">
               Rating
-              <span class="font-bold text-black dark:text-white">9.3</span>
+              <span class="font-bold text-black ">9.3</span>
             </p>
           </div>
         </div>
@@ -49,7 +49,7 @@ function UserProfile()  {
           </span>
         </div>
         <div class="flex flex-col justify-between">
-          <div class="flex items-start justify-between my-2 text-gray-700 dark:text-white md:m-0">
+          <div class="flex items-start justify-between my-2 text-gray-700  md:m-0">
             <p class="text-xl leading-5">Qatar 2024 / FIFA</p>
             <button class="text-red-400 hover:text-red-600">
               <svg
@@ -63,7 +63,7 @@ function UserProfile()  {
               </svg>
             </button>
           </div>
-          <div class="flex items-center my-2 text-xs text-gray-500 dark:text-gray-400 md:m-0">
+          <div class="flex items-center my-2 text-xs text-gray-500  md:m-0">
             <svg
               width="10"
               height="10"
@@ -108,7 +108,7 @@ function UserProfile()  {
               </svg>
             </div>
             <div class="flex flex-col items-start justify-center ml-2">
-              <span class="flex items-center text-sm text-gray-600 dark:text-gray-200">
+              <span class="flex items-center text-sm text-gray-600 ">
                 Charlie Rabiller
                 <span class="block w-2 h-2 ml-1 bg-green-500 rounded-full"></span>
               </span>

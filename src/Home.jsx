@@ -113,7 +113,7 @@ const Home = ({ user }) => {
           </span>
         </div>
         <div class="flex flex-col justify-between">
-          <div class="flex items-start justify-between my-2 text-gray-700 dark:text-white md:m-0">
+          <div class="flex items-start justify-between my-2 text-gray-700  md:m-0">
             <p class="text-xl leading-5">
               How to travel arround the world without any money
             </p>
@@ -129,7 +129,7 @@ const Home = ({ user }) => {
               </svg>
             </button>
           </div>
-          <div class="flex items-center my-2 text-xs text-gray-500 dark:text-gray-400 md:m-0">
+          <div class="flex items-center my-2 text-xs text-gray-500  md:m-0">
             <svg
               width="10"
               height="10"
@@ -174,7 +174,7 @@ const Home = ({ user }) => {
               </svg>
             </div>
             <div class="flex flex-col items-start justify-center ml-2">
-              <span class="flex items-center text-sm text-gray-600 dark:text-gray-200">
+              <span class="flex items-center text-sm text-gray-600 ">
                 Charlie Rabiller
                 <span class="block w-2 h-2 ml-1 bg-green-500 rounded-full"></span>
               </span>
@@ -193,7 +193,7 @@ const Home = ({ user }) => {
           </span>
         </div>
         <div class="flex flex-col justify-between">
-          <div class="flex items-start justify-between my-2 text-gray-700 dark:text-white md:m-0">
+          <div class="flex items-start justify-between my-2 text-gray-700 ">
             <p class="text-xl leading-5">Qatar 2024 / FIFA</p>
             <button class="text-red-400 hover:text-red-600">
               <svg
@@ -207,7 +207,7 @@ const Home = ({ user }) => {
               </svg>
             </button>
           </div>
-          <div class="flex items-center my-2 text-xs text-gray-500 dark:text-gray-400 md:m-0">
+          <div class="flex items-center my-2 text-xs text-gray-500  md:m-0">
             <svg
               width="10"
               height="10"
@@ -252,7 +252,7 @@ const Home = ({ user }) => {
               </svg>
             </div>
             <div class="flex flex-col items-start justify-center ml-2">
-              <span class="flex items-center text-sm text-gray-600 dark:text-gray-200">
+              <span class="flex items-center text-sm text-gray-600 ">
                 Charlie Rabiller
                 <span class="block w-2 h-2 ml-1 bg-green-500 rounded-full"></span>
               </span>
@@ -270,7 +270,7 @@ const Home = ({ user }) => {
           </span>
         </div>
         <div class="flex flex-col justify-between">
-          <div class="flex items-start justify-between my-2 text-gray-700 dark:text-white md:m-0">
+          <div class="flex items-start justify-between my-2 text-gray-700  md:m-0">
             <p class="text-xl leading-5">Qatar 2024 / FIFA</p>
             <button class="text-red-400 hover:text-red-600">
               <svg
@@ -284,7 +284,7 @@ const Home = ({ user }) => {
               </svg>
             </button>
           </div>
-          <div class="flex items-center my-2 text-xs text-gray-500 dark:text-gray-400 md:m-0">
+          <div class="flex items-center my-2 text-xs text-gray-500  md:m-0">
             <svg
               width="10"
               height="10"
@@ -329,7 +329,7 @@ const Home = ({ user }) => {
               </svg>
             </div>
             <div class="flex flex-col items-start justify-center ml-2">
-              <span class="flex items-center text-sm text-gray-600 dark:text-gray-200">
+              <span class="flex items-center text-sm text-gray-600 ">
                 Charlie Rabiller
                 <span class="block w-2 h-2 ml-1 bg-green-500 rounded-full"></span>
               </span>
