@@ -5,7 +5,7 @@ function Service() {
         <div class="h-screen w-72">
           <nav class="px-6 mt-10">
             <a
-              class="flex items-center justify-start p-2 my-6 text-gray-600 transition-colors duration-200 hover:text-gray-800 bg-gray-50 dark:bg-gray-600 dark:text-gray-400hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+              class="flex items-center justify-start p-2 my-6 text-gray-600 transition-colors duration-200 hover:text-gray-800 bg-gray-50"
               href="#"
             >
               <svg
@@ -27,7 +27,7 @@ function Service() {
                 MA BOUTIQUE
               </p>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 "
                 href="#"
               >
                 <span class="text-left">
@@ -47,7 +47,7 @@ function Service() {
                 <span class="mx-4 font-normal text-md">Gérer sa boutique</span>
               </a>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800  hover:bg-gray-100  "
                 href="#"
               >
                 <span class="text-left">
@@ -73,7 +73,7 @@ function Service() {
                 COMMUNICATION
               </p>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800  hover:bg-gray-100"
                 href="#"
               >
                 <span class="text-left">
@@ -93,7 +93,7 @@ function Service() {
                 <span class="mx-4 font-normal text-md">Notifications</span>
               </a>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800  hover:bg-gray-100 "
                 href="#"
               >
                 <span class="text-left">
@@ -119,7 +119,7 @@ function Service() {
                 STATISTIQUES
               </p>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800  hover:bg-gray-100"
                 href="#"
               >
                 <span class="text-left">
@@ -139,7 +139,7 @@ function Service() {
                 <span class="mx-4 font-normal text-md">Nouveau client</span>
               </a>
               <a
-                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800 dark:text-gray-400 hover:bg-gray-100 dark:hover:text-white dark:hover:bg-gray-600"
+                class="flex items-center justify-start p-2 my-4 font-thin text-gray-500 transition-colors duration-200 hover:text-gray-800  hover:bg-gray-100"
                 href="#"
               >
                 <span class="text-left">

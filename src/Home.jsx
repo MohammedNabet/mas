@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
 import "./Home.css";
+import Publication from "./Publication";
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -101,6 +102,12 @@ const Home = ({ user }) => {
           <UserListItem key={user.id} user={user} />
         ))}
       </div>
+
+<br />
+<Publication></Publication>
+
+
+
 
       <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
