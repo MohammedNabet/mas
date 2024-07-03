@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 
 function UserProfile()  {
   return (
-    <div class="bg-white shadow-lg rounded-2xl  dark:bg-gray-800">
+    <div class="bg-white shadow-lg rounded-2xl  ">
       <img alt="profil" src="./m.jpeg" class="w-full mb-4 rounded-t-lg h-28" />
       <div class="flex flex-col items-center justify-center p-4 -mt-16">
         <a href="#" class="relative block">
@@ -41,7 +41,7 @@ function UserProfile()  {
         </div>
       </div>
 
-      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl dark:bg-gray-800 md:flex-row">
+      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl md:flex-row">
         <div class="relative">
           <img src="./P.jpeg" class="w-full rounded-xl md:w-auto md:max-h-40" />
           <span class="absolute px-2 py-1 text-xs text-white rounded bg-gray-700/50 right-2 bottom-2">

@@ -102,7 +102,7 @@ const Home = ({ user }) => {
         ))}
       </div>
 
-      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl dark:bg-gray-800 md:flex-row">
+      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
           <img
             src="./sto.png"
@@ -185,7 +185,7 @@ const Home = ({ user }) => {
       </div>
      
 
-      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl dark:bg-gray-800 md:flex-row">
+      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
           <img src="./TT.jpg" class="w-full rounded-xl md:w-auto md:max-h-40" />
           <span class="absolute px-2 py-1 text-xs text-white rounded bg-gray-700/50 right-2 bottom-2">
@@ -262,7 +262,7 @@ const Home = ({ user }) => {
         </div>
       </div>
 
-      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl dark:bg-gray-800 md:flex-row">
+      <div class="flex flex-col justify-start max-w-xl gap-4 p-4 bg-white shadow-xl rounded-xl  md:flex-row">
         <div class="relative">
           <img src="./P.jpeg" class="w-full rounded-xl md:w-auto md:max-h-40" />
           <span class="absolute px-2 py-1 text-xs text-white rounded bg-gray-700/50 right-2 bottom-2">
