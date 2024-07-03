@@ -6,7 +6,7 @@ import Gallery from "./Gallery";
 
 function UserProfile()  {
   return (
-    <div class="p-4 bg-white shadow-lg rounded-2xl  dark:bg-gray-800">
+    <div class="p-4 bg-white shadow-lg rounded-2xl  ">
       <div class="flex flex-row items-start gap-4 ">
         <img src="./R.jpeg" class="rounded-lg w-28 h-28" />
         <div class="flex flex-col justify-between w-full h-28">

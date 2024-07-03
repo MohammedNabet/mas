@@ -1,6 +1,6 @@
 function Service() {
   return (
-    <div class="relative bg-white dark:bg-gray-800">
+    <div class="relative bg-white">
       <div class="flex flex-col sm:flex-row sm:justify-around">
         <div class="h-screen w-72">
           <nav class="px-6 mt-10">
