@@ -81,18 +81,18 @@ export default function Football() {
               <div class="grow h-14 ...   text-center  font-mono">
                 <h1 className="font-bold">{item.date} </h1>
 
-                <div class="flex items-center text-center">
+                <div class="flex items-center text-center p-3">
                   <button
                     type="button"
-                    class="flex items-center w-full px-4 py-2 text-base font-medium text-black bg-white border-t border-b border-l rounded-l-md hover:bg-gray-100 text-center"
+                    class="w-full px-2 py-2 text-base font-medium text-black bg-white border rounded-r-md hover:bg-gray-100"
                   >
-                    <h1 className="text-center"> {item.namber}</h1>
+                    View
                   </button>
                   <button
                     type="button"
-                    class="w-full px-4 py-2 text-base font-medium text-black bg-white border rounded-r-md hover:bg-gray-100"
+                    class="w-full px-2 py-2 text-base font-medium text-black bg-white border rounded-r-md hover:bg-gray-100"
                   >
-                    654
+                    {item.namber}
                   </button>
                 </div>
               </div>
@@ -103,6 +103,7 @@ export default function Football() {
                 />
               </div>
             </div>
+            <br />
           </li>
         ))}
       </ul>

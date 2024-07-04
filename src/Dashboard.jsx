@@ -10,6 +10,10 @@ import { FaMessage } from "react-icons/fa6";
 import Message from "./Message";
 import { FaFootballBall } from "react-icons/fa";
 import Football from "./Football";
+import { FaBasketShopping } from "react-icons/fa6";
+import Shopping from "./Shopping";
+
+
 
 
 const Dashboard = () => {
@@ -20,7 +24,7 @@ const Dashboard = () => {
     { name: "Profile", label: "Profile", icon: FaUser },
     { name: "Message", label: "Message", icon: FaMessage },
     { name: "Football", label: "Football", icon: FaFootballBall },
-    { name: "Settings", label: "Settings", icon: FaCog },
+    { name: "Shopping", label: "shopping", icon: FaBasketShopping },
   ];
 
   const user = {
@@ -29,13 +33,14 @@ const Dashboard = () => {
     bio: "Software Engineer at ABC Corp. Loves coding and coffee.",
   };
 
+  
   const renderTabContent = () => {
     switch (activeTab) {
       case "Profile":
         return <UserProfile user={user} />;
-      case "Settings":
+      case "Shopping":
         // Implement Settings component or page
-        return <Service user={user} />;
+        return <Shopping user={user} />;
       case "Message":
         // Implement Settings component or page
         return <Message user={user} />;
