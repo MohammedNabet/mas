@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import NavigationButton from "./NavigationButton";
 import { TiShoppingCart } from "react-icons/ti";
 
+
 const CartItem = ({ item, updateQuantity }) => (
   <div className="justify-between mb-6 rounded-lg bg-white p-6 shadow-md sm:flex sm:justify-start">
     <img src={item.image} alt="product" className="w-full rounded-lg sm:w-40" />
