@@ -76,7 +76,7 @@ const Posthome = () => {
               <span className="text-xs text-gray-400">{post.timeAgo}</span>
             </div>
           </div>
-          <p className="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal">
+          <p className="text-gray-800  leading-snug md:leading-normal">
             {post.postText}
             <a href="" className="text-yellow-500">
               {post.hashtags}

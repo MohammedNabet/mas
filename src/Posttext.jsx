@@ -73,7 +73,7 @@ const Posttext = () => {
       </div>
 
       <div className="relative">
-        <p className="text-gray-800 dark:text-gray-100 leading-snug md:leading-normal">
+        <p className="text-gray-800  leading-snug md:leading-normal">
           {showDetail ? text : shortText}
         </p>
         <span className="absolute px-2 py-1 text-xs text-white rounded bg-gray-700/50 right-2 bottom-2">
