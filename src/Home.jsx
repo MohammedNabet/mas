@@ -33,13 +33,13 @@ const Home = ({ user }) => {
     },
     {
       id: 2,
-      name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
+      name: "WIRT",
+      avatarUrl: "./tanja.jpg",
     },
     {
       id: 2,
-      name: "User 2",
-      avatarUrl: "https://bootdey.com/img/Content/avatar/avatar2.png",
+      name: "Manchester",
+      avatarUrl: "./man.jpg",
     },
     // ... other users
   ]);
@@ -166,9 +166,9 @@ const Home = ({ user }) => {
       <br />
       <Publication></Publication>
 
-     
-<Posthome></Posthome>
-      <Posttext></Posttext>
+      <Posthome></Posthome>
+      
+      
     </div>
   );
 };
