@@ -9,9 +9,12 @@ import Service from "./Service";
 import { FaMessage } from "react-icons/fa6";
 import Message from "./Message";
 import { FaFootballBall } from "react-icons/fa";
-import Football from "./Football";
+import { IoFootballSharp } from "react-icons/io5";
+
 import { FaBasketShopping } from "react-icons/fa6";
 import Shopping from "./Shopping";
+import MatchList from "./MatchList.jsx";
+
 
 
 
@@ -23,7 +26,7 @@ const Dashboard = () => {
     { name: "Home", label: "Home", icon: FaHome },
     { name: "Profile", label: "Profile", icon: FaUser },
     { name: "Message", label: "Message", icon: FaMessage },
-    { name: "Football", label: "Football", icon: FaFootballBall },
+    { name: "MatchList", label: "List Match", icon: IoFootballSharp },
     { name: "Shopping", label: "shopping", icon: FaBasketShopping },
   ];
 
@@ -44,9 +47,9 @@ const Dashboard = () => {
       case "Message":
         // Implement Settings component or page
         return <Message user={user} />;
-      case "Football":
+      case "MatchList":
         // Implement Settings component or page
-        return <Football user={user} />;
+        return <MatchList user={user} />;
       case "Home":
       default:
         return <Home user={user} />;
