@@ -7,7 +7,7 @@ import { FaMessage } from "react-icons/fa6";
 import Posttext from "./Posttext";
 import Posthome from "./Posthome";
 
-
+import Formationclub from "./Formationclub";
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -65,6 +65,10 @@ const Home = ({ user }) => {
     },
     // ... other posts
   ]);
+
+
+
+
 
   const UserListItem = ({ user }) => (
     <div className="userItem">
@@ -164,11 +168,9 @@ const Home = ({ user }) => {
       </div>
 
       <br />
-      <Publication></Publication>
-
+     <Publication></Publication>
+      
       <Posthome></Posthome>
-      
-      
     </div>
   );
 };

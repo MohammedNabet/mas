@@ -46,6 +46,7 @@ const Dashboard = () => {
         return <Shopping user={user} />;
       case "Message":
         // Implement Settings component or page
+        
         return <Message user={user} />;
       case "MatchList":
         // Implement Settings component or page
