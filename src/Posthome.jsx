@@ -27,6 +27,19 @@ const posts = [
     title: "Rajae",
   },
   {
+    profileImage: "./inwi.jpeg",
+    profileName: "Inwi",
+    timeAgo: "1 week ago",
+    postText:
+      "inwi fait vivre aux supporters les grands moments du football mondial avec une « Fan Zone » dédiée pour soutenir l’équipe nationale et des offres exceptionnelles",
+    hashtags: "#inwiclub #Football",
+    postImage: "./iwi.jpeg",
+    views: "123,344,893",
+    likes: "45,876",
+    shares: "45,876",
+    title: "FAN ZONE",
+  },
+  {
     profileImage: "./Tanja.jpg",
     profileName: "WIRT - Ittihad Riadi De Tanger",
     timeAgo: "1 week ago",

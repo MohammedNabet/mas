@@ -6,8 +6,9 @@ import { IoNotificationsSharp } from "react-icons/io5";
 import { FaMessage } from "react-icons/fa6";
 import Posttext from "./Posttext";
 import Posthome from "./Posthome";
-
 import Formationclub from "./Formationclub";
+
+
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -21,11 +22,7 @@ const Home = ({ user }) => {
       name: "Raje Club",
       avatarUrl: "./rajae.jpg",
     },
-    {
-      id: 2,
-      name: "ASFAR",
-      avatarUrl: "./far.jpg",
-    },
+
     {
       id: 2,
       name: "club WAC",
@@ -40,6 +37,11 @@ const Home = ({ user }) => {
       id: 2,
       name: "Manchester",
       avatarUrl: "./man.jpg",
+    },
+    {
+      id: 2,
+      name: "ASFAR",
+      avatarUrl: "./far.jpg",
     },
     // ... other users
   ]);
