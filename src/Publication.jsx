@@ -5,7 +5,7 @@ export default function Publication() {
   const [publication, setPublication] = React.useState([
     {
       id: 3,
-      title: "botola inwi pro",
+      title: "Botola inwi pro",
       img: "./botola.png",
       pay1: "./m.jpeg",
       pay2: "./inwi.jpeg",
