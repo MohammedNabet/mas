@@ -170,7 +170,6 @@ const Home = ({ user }) => {
         ))}
       </div>
 
-      <br />
      <Publication></Publication>
       
       <Posthome></Posthome>
