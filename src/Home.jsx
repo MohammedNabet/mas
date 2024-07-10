@@ -111,7 +111,7 @@ const Home = ({ user }) => {
       <nav class="flex flex-wrap items-center justify-between p-4 bg-white">
         <div class="w-auto lg:order-2 lg:w-1/5 lg:text-center">
           <a class="text-xl font-semibold text-gray-800 font-heading" href="#">
-            MasApp
+            ScoreSphere
           </a>
         </div>
         <div class="block lg:hidden">

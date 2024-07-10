@@ -1,5 +1,7 @@
 import React from "react";
 import Posthome from "./Posthome";
+import { SlPicture } from "react-icons/sl";
+
 
 function UserProfile() {
   return (
@@ -14,7 +16,6 @@ function UserProfile() {
         <span className="my-3">
           @_Club_Mas
           <div className="relative">
-            
             <svg
               width="10"
               height="10"
@@ -43,9 +44,11 @@ function UserProfile() {
           </div>
         </div>
 
-        <button className="my-5 px-5 py-2 font-semibold text-sm border border-gray-400">
-          Edit profile
-        </button>
+        <div className="flex">
+          <button className="my-5 px-5 py-2 font-semibold text-sm border border-gray-400">
+            Edit profile
+          </button>
+        </div>
 
         <p className="mb-3 text-center">
           Maghreb Association Sportive de Fès ⚫️🟡
@@ -55,6 +58,27 @@ function UserProfile() {
             Bienvenue sur La Page Officielle du MAS🐯
           </p>
         </p>
+      </div>
+      <div class="flex m-2">
+        <div class="flex-none w-14 ...">
+          <img
+            alt="profile"
+            src="./maslogo.jpg"
+            className="mx-auto object-cover rounded-full h-10 w-10"
+          />
+        </div>
+        <div class="flex-initial w-64 ...">
+          <div className="flex justify-center items-center  bg-gray-100">
+            <input
+              type="text"
+              className="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
+              placeholder="Enter text here"
+            />
+          </div>
+        </div>
+        <div class="flex-initial w-32 ...">
+          <SlPicture className="h-6 w-6 m-2 relative -right-4 " />
+        </div>
       </div>
       <Posthome />
     </div>
