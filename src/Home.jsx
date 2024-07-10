@@ -7,7 +7,8 @@ import { FaMessage } from "react-icons/fa6";
 import Posttext from "./Posttext";
 import Posthome from "./Posthome";
 import Formationclub from "./Formationclub";
-import { SlPicture } from "react-icons/sl";
+
+
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -66,6 +67,10 @@ const Home = ({ user }) => {
     },
     // ... other posts
   ]);
+
+
+
+
 
   const UserListItem = ({ user }) => (
     <div className="userItem">
@@ -157,36 +162,17 @@ const Home = ({ user }) => {
           </a>
         </div>
       </nav>
- <div className="userContainer">
+
+
+      <div className="userContainer">
         {statusUsers.map((user) => (
           <UserListItem key={user.id} user={user} />
         ))}
       </div>
 
-      <div class="flex m-2">
-        <div class="flex-none w-14 ...">
-          <img
-            alt="profile"
-            src="./maslogo.jpg"
-            className="mx-auto object-cover rounded-full h-10 w-10"
-          />
-        </div>
-        <div class="flex-initial w-64 ...">
-          <div className="flex justify-center items-center  bg-gray-100">
-            <input
-              type="text"
-              className="px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent"
-              placeholder="Enter text here"
-            />
-          </div>
-        </div>
-        <div class="flex-initial w-32 ...">
-          <SlPicture className="h-6 w-6 m-2 relative -right-1 " />
-        </div>
-      </div>
-     
-      <Publication></Publication>
-
+      <br />
+     <Publication></Publication>
+      
       <Posthome></Posthome>
     </div>
   );
