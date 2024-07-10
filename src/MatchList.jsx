@@ -66,8 +66,8 @@ function MatchList() {
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="p-4 max-w-md bg-white rounded-lg border shadow-md sm:p-8">
-        <div className="flex justify-between items-center mb-4">
+      <div className="max-w-md bg-white rounded-lg border shadow-md sm:p-8">
+        <div className="flex justify-between items-center mb-4 p-4">
           <h3 className="text-xl font-bold leading-none text-gray-900">
             List Match
           </h3>
@@ -89,7 +89,7 @@ function MatchList() {
           ))}
         </div>
 
-        <div className="flow-root">
+        <div className="flow-root p-4">
           <ul role="list" className="divide-y divide-gray-200">
             {matchData.map((match) => (
               <li key={match.id} className="py-3 sm:py-4">
