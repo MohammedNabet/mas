@@ -181,7 +181,7 @@ const Home = ({ user }) => {
           </div>
         </div>
         <div class="flex-initial w-32 ...">
-          <SlPicture className="h-6 w-6 m-2 relative -right-4 " />
+          <SlPicture className="h-6 w-6 m-2 relative -right-2 " />
         </div>
       </div>
      
