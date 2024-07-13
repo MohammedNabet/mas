@@ -4,6 +4,7 @@ import Publication from "./Publication";
 import { IoNotificationsSharp } from "react-icons/io5";
 import { FaMessage } from "react-icons/fa6";
 import Posthome from "./Posthome";
+import PropTypes from "prop-types";
 
 const Home = ({ user }) => {
   const [statusUsers, setStatusUsers] = React.useState([
@@ -165,13 +166,13 @@ const Home = ({ user }) => {
   const PostCard = ({ post }) => (
     <div className="postCard">
       <div className="postHeader">
-        <img src={post.avatarUrl} alt="Avatar" className="postAvatar" />
-        <span className="postUsername">{post.username}</span>
-        <span className="postDate">{post.date}</span>
+        <img src={post.profileImage} alt="Avatar" className="postAvatar" />
+        <span className="postUsername">{post.profileName}</span>
+        <span className="postDate">{post.timeAgo}</span>
       </div>
-      <p className="postDescription">{post.description}</p>
-      {post.imageUrl && (
-        <img src={post.imageUrl} alt="Post" className="postImage" />
+      <p className="postDescription">{post.postText}</p>
+      {post.postImage && (
+        <img src={post.postImage} alt="Post" className="postImage" />
       )}
       <div className="postFooter">
         <button className="postButton">Like</button>
@@ -197,7 +198,7 @@ const Home = ({ user }) => {
             className="text-xl font-semibold text-gray-800 font-heading"
             href="#"
           >
-            ScoreSphere
+           <img src="./name.png" alt="" className="w-28" />
           </a>
         </div>
         <div className="block lg:hidden">
@@ -259,6 +260,10 @@ const Home = ({ user }) => {
       <Posthome posts={posts} />
     </div>
   );
+};
+
+Home.propTypes = {
+  user: PropTypes.object.isRequired,
 };
 
 export default Home;
