@@ -1,86 +1,32 @@
-import React, { useState } from "react";
+const express = require("express");
+const bodyParser = require("body-parser");
+const pool = require("./db"); // Import the pool from your PostgreSQL configuration file
 
-export default function InsertUser() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+app.use(bodyParser.json());
 
-    if (!username || !password || !email) {
-      setMessage("All fields are required.");
-      return;
-    }
+app.post("/api/login", async (req, res) => {
+  const { username, password, email } = req.body;
 
-    try {
-      const response = await fetch("/api/users", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ username, password, email }),
-      });
+  if (!username || !password || !email) {
+    return res.status(400).json({ message: "All fields are required." });
+  }
 
-      if (response.ok) {
-        const result = await response.json();
-        setMessage(`User created successfully with ID: ${result.id}`);
-      } else {
-        const result = await response.json();
-        setMessage(result.message || "Failed to create user.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setMessage("An error occurred. Please try again.");
-    }
-  };
+  try {
+    const result = await pool.query(
+      "INSERT INTO login (username, password, email) VALUES ($1, $2, $3) RETURNING id",
+      [username, password, email]
+    );
+    const userId = result.rows[0].id;
+    res.status(201).json({ id: userId });
+  } catch (error) {
+    console.error("Error inserting login:", error);
+    res.status(500).json({ message: "Failed to create login." });
+  }
+});
 
-  return (
-    <main className="w-full h-screen flex flex-col items-center justify-center px-4">
-      <div className="max-w-md w-full text-gray-600 space-y-5">
-        <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl text-center">
-          Insert New User
-        </h3>
-        {message && (
-          <div className="text-center text-red-500 mb-4">{message}</div>
-        )}
-        <form onSubmit={handleSubmit} className="space-y-5">
-          <div>
-            <label className="font-medium">Username</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              required
-              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
-            />
-          </div>
-          <div>
-            <label className="font-medium">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
-            />
-          </div>
-          <div>
-            <label className="font-medium">Email</label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
-            />
-          </div>
-          <button className="w-full px-4 py-2 text-white font-medium bg-yellow-600 hover:bg-yellow-500 active:bg-yellow-600 rounded-lg duration-150">
-            Submit
-          </button>
-        </form>
-      </div>
-    </main>
-  );
-}
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
