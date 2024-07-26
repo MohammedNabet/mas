@@ -1,32 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { sql } from "@vercel/postgres";
 
 export default function Login() {
   const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
 
-  const handleSignIn = (e) => {
+  const handleSignIn = async (e) => {
     e.preventDefault();
-    // Perform sign-in logic here
-    // If sign-in is successful, navigate to the dashboard
-    navigate("/dashboard");
+
+    // Simple client-side validation
+    if (!email || !password) {
+      setError("Please enter both email and password.");
+      return;
+    }
+
+    // TODO: Implement actual sign-in logic here
+
+    try {
+      // Example of sign-in logic (adjust as needed)
+      const response =
+        await sql`SELECT * FROM login WHERE email = ${email} AND password = ${password}`;
+      if (response.rows.length === 0) {
+        throw new Error("Invalid email or password");
+      }
+      navigate("/dashboard");
+    } catch (err) {
+      setError(err.message);
+    }
+  };
+
+  const goToInsertUser = () => {
+    navigate("/insert-user");
   };
 
   return (
     <main className="w-full h-screen flex flex-col items-center justify-center px-4">
       <div className="max-w-sm w-full text-gray-600 space-y-5">
         <div className="text-center pb-8">
-          <img src="./logo.png" width={150} className="mx-auto" />
+          <img src="./logo.png" width={150} className="mx-auto" alt="Logo" />
           <div className="mt-5">
             <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">
               Log in to your account
             </h3>
           </div>
         </div>
+        {error && <div className="text-red-500 text-center mb-4">{error}</div>}
         <form onSubmit={handleSignIn} className="space-y-5">
           <div>
             <label className="font-medium">Email</label>
             <input
               type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
             />
@@ -35,6 +63,8 @@ export default function Login() {
             <label className="font-medium">Password</label>
             <input
               type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-yellow-600 shadow-sm rounded-lg"
             />
@@ -53,7 +83,7 @@ export default function Login() {
               <span>Remember me</span>
             </div>
             <a
-              href="javascript:void(0)"
+              href="#"
               className="text-center text-yellow-600 hover:text-yellow-500"
             >
               Forgot password?
@@ -63,7 +93,13 @@ export default function Login() {
             Sign in
           </button>
         </form>
-        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100">
+        <button
+          onClick={goToInsertUser}
+          className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100 mt-4"
+        >
+          Go to Insert User Page
+        </button>
+        <button className="w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium hover:bg-gray-50 duration-150 active:bg-gray-100 mt-4">
           <svg
             className="w-5 h-5"
             viewBox="0 0 48 48"
@@ -99,7 +135,7 @@ export default function Login() {
         <p className="text-center">
           Don't have an account?{" "}
           <a
-            href="javascript:void(0)"
+            href="#"
             className="font-medium text-yellow-600 hover:text-yellow-500"
           >
             Sign up
