@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { sql } from "@vercel/postgres";
 
+
 export default function Login() {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -17,15 +18,20 @@ export default function Login() {
       return;
     }
 
-    // TODO: Implement actual sign-in logic here
-
     try {
-      // Example of sign-in logic (adjust as needed)
-      const response =
-        await sql`SELECT * FROM login WHERE email = ${email} AND password = ${password}`;
+      // Fetch user from database
+      const response = await sql`SELECT * FROM login WHERE email = ${email}`;
       if (response.rows.length === 0) {
         throw new Error("Invalid email or password");
       }
+
+      // Compare hashed password
+      const user = response.rows[0];
+      const match = await (password, user.password);
+      if (!match) {
+        throw new Error("Invalid email or password");
+      }
+
       navigate("/dashboard");
     } catch (err) {
       setError(err.message);
