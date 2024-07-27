@@ -3,13 +3,16 @@ import { NextResponse } from "next/server";
 
 export async function GET(request: Request) {
   try {
-    // إجراء استعلام لتحديد جميع السجلات من الجدول
+    // إنشاء الجدول إذا لم يكن موجوداً
     const result = await sql`
-      SELECT * FROM login;
+      CREATE TABLE IF NOT EXISTS Pets (
+        Name varchar(255),
+        Owner varchar(255)
+      );
     `;
-    return NextResponse.json({ pets: result }, { status: 200 });
+    return NextResponse.json({ result }, { status: 200 });
   } catch (error) {
-    console.error("Error selecting from table:", error);
+    console.error("Error creating table:", error);
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }
