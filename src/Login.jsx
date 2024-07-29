@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { sql } from "@vercel/postgres";
-
 
 export default function Login() {
   const navigate = useNavigate();
@@ -19,19 +17,23 @@ export default function Login() {
     }
 
     try {
-      // Fetch user from database
-      const response = await sql`SELECT * FROM login WHERE email = ${email}`;
-      if (response.rows.length === 0) {
+      // Fetch user from server
+      const response = await fetch("/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
         throw new Error("Invalid email or password");
       }
+
+      const user = await response.json();
 
       // Compare hashed password
-      const user = response.rows[0];
-      const match = await (password, user.password);
-      if (!match) {
-        throw new Error("Invalid email or password");
-      }
-
+      
       navigate("/dashboard");
     } catch (err) {
       setError(err.message);
